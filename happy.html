@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Carta para mi colombiana 💌 </title>
+        <meta name="descrption" content="Una carta de amistad hecha con cariño." />
+        <meta name="theme-color" content="#ff6b8a" />
+        <meta property="og:title" content="Carta para mi colombiana 💌" />
+        <meta property="og:descrption" content="Una carta de amistad hecha con cariño." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://og-playground.vercel.app/api/og?title=Carta%20para%20mi%20amiga%20%F0%9F%92%8C&theme=light" />
+        <meta name="twitter:card" content="sumary_large_image" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+        <style> 
+            :root{
+                --bg1:#fff0f3; --bg2:#ffe5ec;
+                  --card:#ffffffee; --ink:#2d2a32;
+                   --accent:#ff6b8a; --soft:#ffd5de;
+            }
+            *{box-sizing:border-box}
+            html,body{height:100%;}
+            body{
+                margin:0;
+                font-family: Inter, system-uni, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", 
+                "Segoe UI Symbol", "Noto Color Emoji";
+                color:var(--link);
+                background: radial-gradient(1200px 800px at 80% -10%, var(--bg2), transparent),
+                radial-gradient(1200px 800px at -20% 110%, var(--bg1), transparent), 
+                linear-gradient(135deg, #fff, #ffeaf0); 
+            }
+            .wrap{
+                min-height:100%;
+                display:grid;
+                place-items:center;
+                padding:32px 16px;
+            }
+            .card{
+                width:100%;
+                max-width:760px;
+                background:var(--card);
+                backdrop-filter:saturate(140%) blur(6px);
+                border:1px solid #f6c2cf;
+                border-radius:24px;
+                box-shadow: 0 20px 60px rgba(255, 105, 135, 0.18);
+                padding:28px;
+                position:relative;
+                overflow:hidden;
+            }
+            .ribbon{
+                position:absolute; inset:auto -80px -80px auto; 
+                width:240px; height: 240px; border-radius: 50%;
+                background: radial-gradient(circle at 30% 30%, #fff5f7, #ffd2de 60%, #ffc0cf);
+                filter: blur(20px); opacity: .6; pointer-events: none;
+                animation: float 8s ease-in-out infinite;
+            }
+            @keyframes float{50%{transform: translateY(-10px) translateX(-6px)}}
+            .title{
+                display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+            }
+            .title h1{
+                margin: 0;
+                font-family:"Playfair Display", serif;
+                font-weight: 700;
+                font-size: clamp(28px, 4vw, 40px);
+                letter-spacing:.2px;
+            }
+            .heart{
+                width: 34px; height: 34px; position: relative; display: inline-block;
+                transform: translateY(2px);
+                animation: beat 1.2s infinite;
+            } 
+            @keyframes beat{0%, 100%{transform: scale(1) translateY(2px)} 25%{transform: scale(1.08) translateY(2px)} 50%{transform: scale(0.98) translateY(2px)}}
+            .heart::before, -heart::after{ 
+                content: ""; position: absolute; width: 18px; height: 28px; background: var(--accent);
+                border-radius: 18px 18px 0 0; top: 3px;
+                box-shadow: 0 6px 14px rgba(255,107,138,.35);
+            }
+            .heart::before{left: 8px; transform: rotate(-45deg); transform-origin: 0 100%}
+            .heart::after{left: 20px; transform: rotate(45deg); transform-origin: 100% 100%}
+            .meta{
+                margin-top: 6px; font-size: 14px; opacity: .7;
+            }
+            .letter{
+                margin-top: 18px; line-height: 1.8; font-size: 18px;
+                white-space: pre-wrap;
+            }
+            .sig{
+                margin-top: 18px; font-size: 17px; font-weight: 600;
+            }
+            button, a.btn{
+                border: none; cursor: pointer; border-radius: 14px; padding: 12px 16px;
+                font-weight: 600; font-size: 15px; text-decoration: none;
+                background: var(--accent); color:#fff; transition: transform .06s ease, box-shadow .2s ease, opacity .2 ease;
+                box-shadow: 0 8px 24px rgba(255, 107, 138, .35);
+            }
+            button.secondary, a.btn.secondary{
+                background: #fff; color: var(--link);
+                border: 1px solid #f1b6c4; box-shadow: none;
+            }
+            button:hover, a.btn:hover{transform: translateY(-1px)}
+            .footer{
+                margin-top: 14px; font-size: 13px; opacity: 65;
+            }
+            .float-hearts span{
+                position: absolute; bottom: -40px; font-size: 18px; opacity: .4;
+                animation: rise 8s linear infinite;
+            }
+            @keyframes rise{to{transform: translateY(-120px); opacity: 0}}
+            :focus-visible{outline: 3px solid #ff9bb1; outline-offset: 2px}
+            </style> 
+            </head>
+            <body>
+                <div class="wrap">
+                    <main class="card" role="article" aria-label="Carta de amistad">
+                        <div class="ribbon" aria-hidden="true"></div>
+                        <header class="title">
+                            <span class="heart" aria-hidden="true"></span>
+                            <h1> Carta para mi colombiana </h1>
+                            </header>
+                            <div class="meta">
+                                <span id="fecha"></span> . De <strong>Joao</strong> para <strong>Paula</strong>
+                            </div>
+
+                            <section class="letter" id="contenido" tabindex="0">
+Querida Paula,
+Hoy quería tomarme un tiempito para decirte lo mucho que te extraño.
+Gracias por esta linda amistad, aunque sea a distancia, también por reír conmigo y contarnos chistes JAJAJAJJA.
+Admiro en ti (lo divertida que eres, tu fuerza, tu alegría, tu forma de ver la vida, lo inteligente que eres).
+Me inspiras a ser mejor persona y me recuerdas que los pequeños detalles hacen grande cada día.
+Quiero que sepas que aquí tienes a alguien que te apoya en tus metas y te acompaña en cada etapa que estas dando, en los días brillantes y también en los nublados jejeje. Gracias por ser tú, auténtica e increíble y exclusiva.
+Te extraño demasiado, aunque estemos lejos igual voy a tener este cariño por ti, ya nos veremos pronto, cuando llegue ese día vamos a aprovechar al máximo.
+Con cariño infinito.
+[Joao 😀]
+
+                            </section>
+                            <div class="sig"> [Joao]</div>
+                            <div class="actions">
+                                <button id="btnCompartir" title="Compartir enlace">Compartir</button>
+                                <button class="secondary" id="btnCopiar" title="Copiar enlace">Copiar enlace</button>
+                                <a class="btn secondary" href="#" onclick="window.print(); return false;" title="Imprimir o guardar como PDF">Guardar como PDF</a>
+                                <a class="btn" id="bntEditar" href="#" title="Editar texto">Editar texto</a>
+                            </div>
+                            <div class="footer"
+                            Hecho con cariño 💗 . Si lo subes a GitHub Pages, podrás compartir el enlace. 
+                        </div>
+                        <div class="float-hearts" aria-hidden="true"></div>
+                    </main>
+                </div>
+
+                <script>
+                    const fecha = new Date().toLocaleDateString('es-PE', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+                    document.getElementById('fecha').textContent = fecha.charAt(0).toUpperCase() + fecha.slice(1);
+
+                    const cont = document.querySelector('.float-hearts');
+    const hearts = ['💗','💖','💞','💝','💓','💕'];
+    function spawnHeart(){
+      const s = document.createElement('span');
+      s.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+      s.style.left = Math.random()*100 + '%';
+      s.style.animationDuration = (6 + Math.random()*6) + 's';
+      s.style.fontSize = (14 + Math.random()*16) + 'px';
+      cont.appendChild(s);
+      setTimeout(()=> s.remove(), 13000);
+    }
+    setInterval(spawnHeart, 800); 
+
+     const btnCompartir = document.getElementById('btnCompartir');
+    btnCompartir.addEventListener('click', async () => {
+      const url = location.href;
+      const title = document.title;
+      const text = 'Te comparto mi carta 💌';
+      if(navigator.share){
+        try{ await navigator.share({ title, text, url }); }catch(e){}
+      }else{
+        await navigator.clipboard.writeText(url);
+        alert('Enlace copiado al portapapeles.');
+      }
+    });
+
+     document.getElementById('btnCopiar').addEventListener('click', async () => {
+      await navigator.clipboard.writeText(location.href);
+      alert('Enlace copiado al portapapeles.');
+    });
+
+    const carta = document.getElementById('contenido');
+    const btnEditar = document.getElementById('btnEditar');
+    let editando = false;
+    btnEditar.addEventListener('click', (e)=>{
+      e.preventDefault();
+      editando = !editando;
+      carta.contentEditable = editando ? 'true' : 'false';
+      carta.focus();
+      btnEditar.textContent = editando ? 'Terminar edición' : 'Editar texto';
+      if(!editando){ saveDraft(); }
+    });
+
+     function saveDraft(){
+      localStorage.setItem('carta-amiga', carta.innerText.trim());
+    }
+    function loadDraft(){
+      const draft = localStorage.getItem('carta-amiga');
+      if(draft){ carta.innerText = draft; }
+    }
+    loadDraft();
+                </script>
+            </body>
+</html>
